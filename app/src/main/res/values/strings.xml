@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">Demo_project</string>
+    <string name="action_settings">Settings</string>
+    <string name="please_enter_password">please_enter_password</string>
+    <string name="please_enter_mobile_userid">please_enter_mobile_userid</string>
+</resources>
