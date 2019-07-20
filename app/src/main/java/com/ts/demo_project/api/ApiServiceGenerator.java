@@ -11,7 +11,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class ApiServiceGenerator {
 
 
-    public static String QA_apiBaseUrl = "https://qa-taikee.peel-works.com/ubuntu/";
+    public static String QA_apiBaseUrl = "http://192.168.20.110/demo";
     public static String apiBaseUrl = QA_apiBaseUrl;
 
     private static Retrofit.Builder builder =
@@ -41,16 +41,7 @@ public class ApiServiceGenerator {
         return retrofit.create(serviceClass);
     }
 
-    public static void changeApiBaseUrl(String newApiBaseUrl) {
-        apiBaseUrl = newApiBaseUrl;
 
-        builder = new Retrofit.Builder()
-                .baseUrl(apiBaseUrl)
-                .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
-                .addConverterFactory(GsonConverterFactory.create());
-        httpClient =
-                new OkHttpClient.Builder();
-    }
 
     public static Retrofit getRetrofit() {
         return retrofit;
